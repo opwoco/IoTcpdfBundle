@@ -1,6 +1,6 @@
 <?php
 /**
-* Manage data using Doctrine CacheDrivers
+* TCPDF Bridge 
 *
 * @author ioalessio
 */
@@ -14,7 +14,7 @@ class Tcpdf extends \TCPDF{
         // set document information
         $this->SetCreator(PDF_CREATOR);
         $this->SetAuthor('Alessio');
-        $this->SetTitle('Prova');
+        $this->SetTitle('Test');
         $this->SetSubject('TCPDF test');
         $this->SetKeywords('TCPDF, PDF, example, test, guide');
 
@@ -56,7 +56,6 @@ class Tcpdf extends \TCPDF{
 
     }
     /**
-     * @param type $config
      */
     public function quick_pdf($html, $file = "html.pdf", $format = "S")
     {
