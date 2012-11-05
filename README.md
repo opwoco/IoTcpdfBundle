@@ -39,9 +39,8 @@ public function registerBundles()
 
 HOW TO USE:
 ==============
-
       //in mybundle/controllers/myController.php
-
+``` php
         class MyController extends Controller
         {
             /**
@@ -55,11 +54,11 @@ HOW TO USE:
                 return $this->get('io_tcpdf')->quick_pdf($html);
             }
         }
-
+```
      //in mybundle/Resources/views/myController.pdf.twig
-
+``` twig
           put here your html code
-
+```
 
 TODO
 ============
