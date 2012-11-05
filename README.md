@@ -48,11 +48,14 @@ Controller: mybundle/controllers/myController.php
              */
             public function mypageAction()
             {
+                //creating html source
                 $html = $this->renderView('MyBundle:MyController:mypage.pdf.twig', array());
 
-                //io_tcpdf will returns Response object
+                //loading io_tcpdf library
                 $pdf = $this->get('io_tcpdf');
-                //do your stuff
+                //do your stuff here
+                    
+                //display pdf (it returns a Response Object)
                 return $pdf->quick_pdf($html);
             }
         }
