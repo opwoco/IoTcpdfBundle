@@ -1,5 +1,5 @@
 {
-	"name": "gergelypolonkai/tcpdfbundle",
+	"name": "gayalab/tcpdfbundle",
 	"type": "symfony-bundle",
 	"description": "Provides TCPDF integration for Symfony",
 	"keywords": [ "tcpdf", "pdf" ],
@@ -8,16 +8,6 @@
 		{
 			"name": "Alessio",
 			"email": "alessio@gayalab.it"
-		},
-		{
-			"name": "Gergely Polonkai",
-			"email": "gergely@polonkai.eu"
-		}
-	],
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/w00d5t0ck"
 		}
 	],
 	"require": {
