@@ -39,7 +39,7 @@ public function registerBundles()
 
 HOW TO USE:
 ==============
-      //in mybundle/controllers/myController.php
+Controller: mybundle/controllers/myController.php
 ``` php
         class MyController extends Controller
         {
@@ -51,13 +51,18 @@ HOW TO USE:
                 $html = $this->renderView('MyBundle:MyController:mypage.pdf.twig', array());
 
                 //io_tcpdf will returns Response object
-                return $this->get('io_tcpdf')->quick_pdf($html);
+                $pdf = $this->get('io_tcpdf');
+                //do your stuff
+                return $pdf->quick_pdf($html);
             }
         }
 ```
-     //in mybundle/Resources/views/myController.pdf.twig
+
+View: mybundle/Resources/views/myController.pdf.twig
 ``` twig
-          put here your html code
+<div><h1>header</h1></div>
+<hr />
+<div>content</div>
 ```
 
 TODO
