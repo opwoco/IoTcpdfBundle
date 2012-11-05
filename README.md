@@ -58,8 +58,8 @@ Controller: mybundle/controllers/myController.php
         }
 ```
 
-View: mybundle/Resources/views/myController.pdf.twig
-``` twig
+View: mybundle/Resources/views/myController/mypage.pdf.twig
+``` html
 <div><h1>header</h1></div>
 <hr />
 <div>content</div>
