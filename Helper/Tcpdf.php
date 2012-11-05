@@ -11,16 +11,16 @@ class Tcpdf extends \TCPDF{
 
     public function init()
     {
+        $this->SetPrintHeader(false);
+
         // set document information
         $this->SetCreator(PDF_CREATOR);
-        $this->SetAuthor('Alessio');
-        $this->SetTitle('Test');
-        $this->SetSubject('TCPDF test');
-        $this->SetKeywords('TCPDF, PDF, example, test, guide');
+        //$this->SetAuthor('Alessio');
+        //$this->SetTitle('Test');
+        //$this->SetSubject('TCPDF test');
+        //$this->SetKeywords('TCPDF, PDF, example, test, guide');
 
-        // set default header data
-        $this->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING);
-
+        
         // set header and footer fonts
         $this->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
         $this->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
@@ -29,8 +29,8 @@ class Tcpdf extends \TCPDF{
         $this->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
         //set margins
-        $this->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
-        $this->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $this->SetMargins(PDF_MARGIN_LEFT, 10, PDF_MARGIN_RIGHT);
+        //$this->SetHeaderMargin(PDF_MARGIN_HEADER);
         $this->SetFooterMargin(PDF_MARGIN_FOOTER);
 
         //set auto page breaks
@@ -48,10 +48,9 @@ class Tcpdf extends \TCPDF{
         // dejavusans is a UTF-8 Unicode font, if you only need to
         // print standard ASCII chars, you can use core fonts like
         // helvetica or times to reduce file size.
-        $this->SetFont('dejavusans', '', 14, '', true);
+        $this->SetFont('dejavusans', '', 13, '', true);
 
         // Add a page
-        // This method has several options, check the source code documentation for more information.
         $this->AddPage();
 
     }

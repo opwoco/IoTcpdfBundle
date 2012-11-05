@@ -1,6 +1,9 @@
+parameters:
+    tcpdf_class:  Io\TcpdfBundle\Helper\Tcpdf
+  
 services:
   io_tcpdf:
-    class:  Io\TcpdfBundle\Helper\Tcpdf
+    class:  %tcpdf_class%
     arguments:
       orientation: P
       unit:        mm
