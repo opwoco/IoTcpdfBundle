@@ -1,46 +1,40 @@
 How to Install
 ==============
-  1. Download TCPDF library at http://sourceforge.net/projects/tcpdf/files/
-      and put it in vendor folder
 
-  2. Add this bundle to your vendor/ dir
-    * Vendor Mode
-      Add the following lines in your deps file::
+Add IoTcpdfBundle in your composer.json:
 
-        [IoTcpdfBundle]
-        git=git://github.com/ioalessio/IoTcpdfBundle.git
-        target=/bundles/Io/TcpdfBundle
+```js
+{
+    "require": {
+        "gayalab/tcpdfbundle": "dev-master"
+    }
+}
+```
 
+Now tell composer to download the bundle by running the command:
 
-      Run the vendor script:
+``` bash
+$ php composer.phar update
+```
 
-        ./bin/vendors install
+Composer will install the bundle to your project's `vendor/gayalab` directory.
 
+### Step 2: Enable the bundle
 
-  3. Add the "Io" namespace to your autoloader:
+Enable the bundle in the kernel:
 
-        // app/autoload.php
-        $loader->registerNamespaces(array(
-        'Io' => __DIR__.'/../vendor/bundles',
-        // your other namespaces
-        ));
+``` php
+<?php
+// app/AppKernel.php
 
-        //in same file include tcpdf library
-        require_once __DIR__.'/../vendor/tcpdf/tcpdf.php';
-
-
-  4. Add the "Io" namespace to your kernel:
-
-        // app/ApplicationKernel.php
-        public function registerBundles()
-        {
-            return array(
-                // ...
-                new Io\TcpdfBundle\IoTcpdfBundle(),
-                // ...
-            );
-        }
-
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new Io\TcpdfBundle\IoTcpdfBundle(),
+    );
+}
+```
 
 
 HOW TO USE:
