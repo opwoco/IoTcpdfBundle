@@ -1,5 +1,5 @@
 {
-	"name": "gayalab/tcpdfbundle",
+	"name": "opwoco/tcpdfbundle",
 	"type": "symfony-bundle",
 	"description": "Fork of gayalab/tcpdfbundle. Provides TCPDF integration for Symfony",
 	"keywords": [ "tcpdf", "pdf" ],
